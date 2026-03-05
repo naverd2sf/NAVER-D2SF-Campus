@@ -433,7 +433,7 @@
       font-family: 'Rethink Sans', sans-serif;
       font-size: clamp(24px, 2.8vw, 32px);
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: 0.3px;
       margin-bottom: 28px;
       line-height: 1.1;
     }
@@ -813,10 +813,11 @@
       display: flex;
       gap: 56px;
     }
+    .footer-col h4.footer-col-en { font-family: 'NanumSquareNeo', sans-serif; }
     .footer-col h4 {
-      font-size: 0.72rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.2px;
       text-transform: uppercase;
       color: var(--foreground);
       margin-bottom: 16px;
@@ -980,14 +981,13 @@
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <section class="about" id="about">
   <div class="container">
-    <p class="section-eyebrow reveal">About</p>
     <div class="about-inner">
       <div class="about-headline reveal">
         <h2 class="section-heading">네이버 D2SF<br>캠퍼스 기술창업 공모전</h2>
       </div>
       <div class="about-copy reveal">
 	<p>
-        <p>이제는 누구나 아이디어만 있으면 제품을 만들 수 있는 시대가 되었습니다. 하지만 만드는 것이 쉬워질수록 "왜 이 문제를 해결해야 하는가"라는 본질은 더 중요합니다. 결국 창업은 문제에 집착하고, 시장과 고객에 집중하며, 자신만의 미션으로 세상을 혁신하려는 창업가의 태도가 이끌어갑니다.</p>
+        <p>이제 누구나 아이디어만 있으면 제품을 만들 수 있습니다. 만드는 것이 쉬워질수록 "왜 이 문제를 해결해야 하는가"라는 본질은 더욱 더 중요합니다. 문제에 집착하고, 시장과 고객에 집중하며, 자신만의 미션으로 세상을 혁신하려는 창업가와 함께하고 싶습니다.</p>
       </div>
     </div>
   </div>
@@ -996,7 +996,6 @@
 <!-- ═══════════════ BENEFITS ═══════════════ -->
 <section class="benefits" id="benefits">
   <div class="container">
-    <p class="section-eyebrow reveal">Benefit</p>
     <h2 class="section-heading reveal">선발팀 혜택</h2>
 
     <div class="benefits-grid">
@@ -1024,7 +1023,6 @@
 <!-- ═══════════════ TIMELINE ═══════════════ -->
 <section class="timeline-section" id="timeline">
   <div class="container">
-    <p class="section-eyebrow reveal">Timeline</p>
     <h2 class="section-heading reveal">지원 <span class="accent">프로세스</span></h2>
 
     <div class="tl-row reveal">
@@ -1033,7 +1031,6 @@
         <p class="tl-num">STEP 01</p>
         <p class="tl-date">~ 5월 10일 (일)</p>
         <p class="tl-title">서류 접수</p>
-        <p class="tl-desc">Apply Now 버튼을 통해, 지원해주세요.</p>
       </div>
 
       <div class="tl-arrow" aria-hidden="true">
@@ -1046,7 +1043,6 @@
         <p class="tl-num">STEP 02</p>
         <p class="tl-date">6월</p>
         <p class="tl-title">팀별 인터뷰</p>
-        <p class="tl-desc">서류 통과 팀 대상으로 네이버 D2SF와 개별 미팅을 진행합니다.</p>
       </div>
 
       <div class="tl-arrow" aria-hidden="true">
@@ -1059,7 +1055,6 @@
         <p class="tl-num">STEP 03</p>
         <p class="tl-date">6월 23일 (화)</p>
         <p class="tl-title">최종 발표</p>
-        <p class="tl-desc">2차 미팅을 토대로 선발한 최종 선정팀을 발표합니다.</p>
       </div>
 
       <div class="tl-arrow" aria-hidden="true">
@@ -1072,7 +1067,6 @@
         <p class="tl-num">STEP 04</p>
         <p class="tl-date">7월 ~ 12월</p>
         <p class="tl-title">인큐베이팅</p>
-        <p class="tl-desc"> 6개월간 맞춤형 인큐베이팅 프로그램을 진행합니다.</p>
       </div>
 
     </div>
@@ -1195,7 +1189,6 @@
 <!-- ═══════════════ FAQ ═══════════════ -->
 <section class="faq-section" id="faq">
   <div class="container">
-    <p class="section-eyebrow reveal">FAQ</p>
     <h2 class="section-heading reveal">자주 묻는 질문</h2>
 
     <div class="faq-list reveal">
@@ -1299,7 +1292,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 class="footer-col-en">Contact</h4>
           <ul>
             <li><a href="mailto:d2sf@navercorp.com">d2sf@navercorp.com</a></li>
           </ul>
@@ -1320,8 +1313,8 @@
     const COLOR  = '#1c1917';
     const BG     = '#ffffff';
     const ECHO   = 5;           // number of echo layers
-    const STEP   = 12;          // px between each echo layer
-    const LINE_W = 1.0;         // stroke width per echo
+    const STEP   = 9;           // px between each echo layer
+    const LINE_W = 0.6;         // stroke width per echo
 
     function render() {
       const dpr = window.devicePixelRatio || 1;
@@ -1358,19 +1351,18 @@
 
       /* 1. Echo layers — stroke only, offset downward, fading */
       for (let i = ECHO; i >= 1; i--) {
-        const t   = i / ECHO;                    // 1 = far, 0 = near
-        const opacity = 0.06 + t * 0.18;          // i=1 faded, i=5 most visible
+        const opacity = 0.05 + (i / ECHO) * 0.2;  // close = faded, far = visible
         ctx.save();
         ctx.font        = fontStr;
         ctx.strokeStyle = COLOR;
         ctx.lineWidth   = LINE_W;
         ctx.lineJoin    = 'round';
         ctx.globalAlpha = opacity;
-        ctx.strokeText('Obsessed?',  cx, y2 + i * STEP);
+        ctx.strokeText('Obsessed?', cx, y2 + i * STEP);
         ctx.restore();
       }
 
-      /* 2. Solid fill on top — covers upper echo overlap, leaving only lower echoes visible */
+      /* 2. Solid fill on top */
       ctx.save();
       ctx.font        = fontStr;
       ctx.fillStyle   = COLOR;
