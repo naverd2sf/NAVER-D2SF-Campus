@@ -74,7 +74,7 @@
       text-decoration: none;
     }
     .nav-logo img {
-      height: 30px;
+      height: 26px;
       width: auto;
       display: block;
     }
@@ -348,7 +348,7 @@
     .about-copy { /* right col — paragraphs */ }
     .about-copy p {
       font-size: 0.9rem;
-      color: var(--muted-fg);
+      color: #3f3f46;
       line-height: 1.65;
       text-align: justify;
       word-break: keep-all;
@@ -780,6 +780,7 @@
       background: var(--muted);
       border-top: 1px solid var(--border);
       padding: 48px 40px 32px;
+      position: relative;
     }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top {
@@ -810,19 +811,20 @@
 
     .footer-links {
       display: flex;
-      gap: 40px;
+      gap: 56px;
     }
     .footer-col h4 {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--foreground);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
     .footer-col ul li a {
       font-size: 0.82rem;
+      letter-spacing: 0.2px;
       color: var(--muted-fg);
       text-decoration: none;
       transition: color 0.15s;
@@ -830,10 +832,9 @@
     .footer-col ul li a:hover { color: var(--foreground); }
 
     .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      position: absolute;
+      bottom: 32px;
+      right: 40px;
       font-size: 0.75rem;
       color: var(--muted-fg);
     }
@@ -939,7 +940,6 @@
 
   <div class="hero-actions reveal">
     <a href="https://airtable.com/appIVLeFNOTuXM5kP/pagJOiCvxgOpVBBWi/form" target="_blank" rel="noopener" class="btn btn-default btn-lg">Apply Now →</a>
-    <a href="#benefits" class="btn btn-outline btn-lg">Benefit</a>
   </div>
 </section>
 
@@ -948,13 +948,13 @@
   <div class="ticker-track">
     <div class="ticker-set">
       <span class="ticker-item"><span class="dot">✦</span> 지분 희석 없는 개발 자금 1,000만 원</span>
-      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 500만 원</span>
+      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 크레딧 500만 원</span>
       <span class="ticker-item"><span class="dot">✦</span> D2SF@강남,분당 입주</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 기술 리더 멘토링</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 직접 투자 연계</span>
       <span class="ticker-item"><span class="dot">✦</span> 선배 창업가 피드백</span>
       <span class="ticker-item"><span class="dot">✦</span> 지분 희석 없는 개발 자금 1,000만 원</span>
-      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 500만 원</span>
+      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 크레딧 500만 원</span>
       <span class="ticker-item"><span class="dot">✦</span> D2SF@강남,분당 입주</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 기술 리더 멘토링</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 직접 투자 연계</span>
@@ -962,13 +962,13 @@
     </div>
     <div class="ticker-set" aria-hidden="true">
       <span class="ticker-item"><span class="dot">✦</span> 지분 희석 없는 개발 자금 1,000만 원</span>
-      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 500만 원</span>
+      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 크레딧 500만 원</span>
       <span class="ticker-item"><span class="dot">✦</span> D2SF@강남,분당 입주</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 기술 리더 멘토링</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 직접 투자 연계</span>
       <span class="ticker-item"><span class="dot">✦</span> 선배 창업가 피드백</span>
       <span class="ticker-item"><span class="dot">✦</span> 지분 희석 없는 개발 자금 1,000만 원</span>
-      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 500만 원</span>
+      <span class="ticker-item"><span class="dot">✦</span> GPU · Cloud 크레딧 500만 원</span>
       <span class="ticker-item"><span class="dot">✦</span> D2SF@강남,분당 입주</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 기술 리더 멘토링</span>
       <span class="ticker-item"><span class="dot">✦</span> 네이버 직접 투자 연계</span>
@@ -1288,12 +1288,6 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="logo.png" alt="NAVER D2SF" />
-        </div>
-        <p>캠퍼스 기술창업 공모전<br>문의: <a href="mailto:d2sf@navercorp.com">d2sf@navercorp.com</a></p>
-      </div>
       <div class="footer-links">
         <div class="footer-col">
           <h4>바로가기</h4>
@@ -1310,7 +1304,6 @@
             <li><a href="mailto:d2sf@navercorp.com">d2sf@navercorp.com</a></li>
           </ul>
         </div>
-      </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 NAVER D2SF. All rights reserved.</span>
