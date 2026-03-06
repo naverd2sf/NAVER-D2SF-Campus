@@ -9,10 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/gh/fonts-archive/NanumSquareNeo/NanumSquareNeo.css" rel="stylesheet" />
   <style>
-    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Tokens (shadcn-style) ── */
     :root {
       --background:   #ffffff;
       --foreground:   #09090b;
@@ -21,17 +19,13 @@
       --muted:        #e8e8e6;
       --muted-fg:     #71717a;
       --border:       #e4e4e7;
-      --input:        #e4e4e7;
-      --primary:      #09090b;
       --primary-fg:   #fafafa;
       --accent:       #00c73c;
       --accent-fg:    #ffffff;
-      --accent-muted: rgba(0,199,60,0.08);
       --radius:       8px;
       --radius-lg:    12px;
       --radius-xl:    16px;
       --shadow-sm:    0 1px 2px 0 rgba(0,0,0,0.05);
-      --shadow:       0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
       --shadow-md:    0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
       --shadow-lg:    0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
     }
@@ -39,7 +33,7 @@
     html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      font-family: 'NanumSquareNeo', 'Rethink Sans', sans-serif;
+      font-family: 'Rethink Sans', 'NanumSquareNeo', sans-serif;
       background: var(--background);
       color: var(--foreground);
       overflow-x: hidden;
@@ -47,10 +41,6 @@
       letter-spacing: -0.3px;
     }
 
-    /* English text */
-    .en { font-family: 'Rethink Sans', sans-serif; }
-
-    /* ── Utility ── */
     .container { max-width: 1100px; margin: 0 auto; }
 
     /* ── NAV ── */
@@ -94,18 +84,18 @@
       transition: color 0.15s, background 0.15s;
     }
     .nav-links a:hover { color: var(--foreground); background: var(--muted); }
+    .nav-links a.nav-cta:hover { color: #ffffff; background: var(--foreground); }
 
-    .nav-cta {
-      font-family: 'Rethink Sans', sans-serif !important;
-      background: var(--foreground) !important;
-      color: var(--primary-fg) !important;
-      font-weight: 600 !important;
-      padding: 8px 18px !important;
-      border-radius: var(--radius) !important;
-      font-size: 0.85rem !important;
-      transition: opacity 0.15s !important;
+    .nav-links a.nav-cta {
+      background: var(--foreground);
+      color: #ffffff;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      transition: opacity 0.15s;
     }
-    .nav-cta:hover { opacity: 0.85 !important; background: var(--foreground) !important; }
+    .nav-cta:hover { opacity: 0.85; background: var(--foreground); }
 
     /* ── HERO ── */
     .hero {
@@ -140,12 +130,11 @@
       font-weight: 600;
       padding: 7px 18px;
       border-radius: 999px;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
       position: relative;
       z-index: 1;
       box-shadow: var(--shadow-sm);
       letter-spacing: -0.2px;
-      margin-bottom: 4px;
     }
     .hero-badge .dot {
       width: 7px; height: 7px;
@@ -160,7 +149,6 @@
     }
 
     .hero-sub {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: clamp(18px, 2.5vw, 28px);
       font-weight: 700;
       color: var(--muted-fg);
@@ -195,14 +183,12 @@
       box-shadow: var(--shadow-sm);
     }
     .cd-block .cd-num {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: 1.75rem;
       font-weight: 800;
       line-height: 1;
       color: var(--foreground);
       letter-spacing: -1px;
     }
-    .cd-block.accent .cd-num { color: var(--foreground); }
     .cd-block .cd-unit {
       font-size: 0.6rem;
       font-weight: 600;
@@ -212,7 +198,6 @@
       margin-top: 4px;
     }
     .cd-sep {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--border);
@@ -229,12 +214,11 @@
       z-index: 1;
     }
 
-    /* ── Buttons (shadcn) ── */
+    /* ── Buttons ── */
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-family: 'Rethink Sans', sans-serif;
       font-weight: 600;
       font-size: 0.875rem;
       padding: 10px 20px;
@@ -253,20 +237,6 @@
       border-color: var(--foreground);
     }
     .btn-default:hover { opacity: 0.88; }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--foreground);
-      border-color: var(--border);
-    }
-    .btn-outline:hover { background: var(--muted); }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--accent-fg);
-      border-color: var(--accent);
-    }
-    .btn-accent:hover { opacity: 0.9; }
 
     .btn-lg {
       font-size: 0.95rem;
@@ -293,7 +263,6 @@
       flex-shrink: 0;
     }
     .ticker-item {
-      font-family: 'Rethink Sans', sans-serif;
       font-weight: 500;
       font-size: 0.8rem;
       color: rgba(255,255,255,0.9);
@@ -313,14 +282,6 @@
     /* ── SECTION ── */
     section { padding: 96px 40px; }
 
-    .section-eyebrow {
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0;
-      text-transform: none;
-      color: var(--muted-fg);
-      margin-bottom: 10px;
-    }
     .section-heading {
       font-size: clamp(26px, 3.5vw, 44px);
       font-weight: 800;
@@ -328,12 +289,6 @@
       line-height: 1.15;
     }
     .section-heading .accent { color: var(--foreground); }
-    .section-desc {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: var(--muted-fg);
-      line-height: 1.7;
-    }
 
     /* ── ABOUT ── */
     .about { background: var(--muted); }
@@ -344,8 +299,6 @@
       margin-top: 16px;
       align-items: start;
     }
-    .about-headline { /* left col — heading stays here */ }
-    .about-copy { /* right col — paragraphs */ }
     .about-copy p {
       font-size: 0.9rem;
       color: #3f3f46;
@@ -353,42 +306,7 @@
       text-align: justify;
       word-break: keep-all;
     }
-    .about-copy p + p {
-      margin-top: 14px;
-    }
-    .about-copy p .hi { color: var(--foreground); }
-
-    .about-quotes {
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .about-quote {
-      padding-left: 14px;
-      border-left: 2px solid var(--border);
-    }
-    .quote-text {
-      font-size: 0.875rem !important;
-      color: var(--foreground) !important;
-      line-height: 1.7 !important;
-      text-align: left !important;
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-      border-top: none !important;
-    }
-    .quote-author {
-      margin-top: 6px !important;
-      font-size: 0.75rem !important;
-      color: var(--muted-fg) !important;
-      font-weight: 500 !important;
-      letter-spacing: 0.2px !important;
-      text-align: left !important;
-      border-top: none !important;
-      padding-top: 0 !important;
-    }
+    .about-copy p + p { margin-top: 14px; }
 
     /* ── BENEFITS ── */
     .benefits { background: var(--background); }
@@ -413,24 +331,7 @@
       transform: translateY(-3px);
     }
 
-    .benefit-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: var(--muted);
-      color: var(--foreground);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: var(--radius);
-      margin-bottom: 18px;
-      font-family: 'Rethink Sans', sans-serif;
-    }
-
     .benefit-card h3 {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: clamp(24px, 2.8vw, 32px);
       font-weight: 800;
       letter-spacing: 0.3px;
@@ -438,16 +339,6 @@
       line-height: 1.1;
     }
     .benefit-card h3 .hash { color: var(--foreground); }
-
-    /* dark card variant */
-    .benefit-card.dark {
-      background: var(--foreground);
-      border-color: var(--foreground);
-    }
-    .benefit-card.dark h3 { color: #fff; }
-    .benefit-card.dark h3 .hash { color: rgba(255,255,255,0.45); }
-    .benefit-card.dark .benefit-list li { color: rgba(255,255,255,0.65); }
-    .benefit-card.dark .benefit-list li::before { color: rgba(255,255,255,0.3); }
 
     .benefit-list {
       list-style: none;
@@ -466,35 +357,12 @@
     }
     .benefit-list li::before {
       content: '—';
-      font-family: 'Rethink Sans', sans-serif;
       font-size: 0.75rem;
       font-weight: 700;
       color: var(--border);
       flex-shrink: 0;
       margin-top: 1px;
     }
-
-    .benefit-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 24px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: var(--foreground);
-      color: rgba(255,255,255,0.75);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: var(--radius);
-      font-family: 'Rethink Sans', sans-serif;
-    }
-    .chip .cv { color: rgba(255,255,255,0.6); }
 
     /* ── TIMELINE ── */
     .timeline-section { background: var(--muted); }
@@ -523,9 +391,7 @@
       box-shadow: var(--shadow-md);
       transform: translateY(-3px);
     }
-    .tl-step.active {
-      background: var(--foreground);
-    }
+    .tl-step.active { background: var(--foreground); }
 
     .tl-arrow {
       display: flex;
@@ -534,17 +400,10 @@
       flex-shrink: 0;
       width: 40px;
       color: var(--border);
-      position: relative;
-      z-index: 1;
     }
-    .tl-arrow svg {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-    }
+    .tl-arrow svg { width: 20px; height: 20px; flex-shrink: 0; }
 
     .tl-num {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1px;
@@ -554,7 +413,6 @@
     .tl-step.active .tl-num { color: rgba(255,255,255,0.45); }
 
     .tl-date {
-      font-family: 'Rethink Sans', sans-serif;
       font-size: 0.78rem;
       font-weight: 600;
       color: var(--muted-fg);
@@ -569,145 +427,6 @@
       margin-bottom: 10px;
     }
     .tl-step.active .tl-title { color: #fff; }
-
-    .tl-desc {
-      font-size: 0.8rem;
-      color: var(--muted-fg);
-      line-height: 1.6;
-      display: none;
-    }
-    .tl-step.active .tl-desc,
-    .tl-step:hover .tl-desc {
-      display: block;
-    }
-    .tl-step.active .tl-desc { color: rgba(255,255,255,0.55); }
-
-    /* ── APPLY ── */
-    .apply-section { background: var(--foreground); color: #fff; }
-    .apply-section .section-eyebrow { color: var(--accent); }
-    .apply-section .section-heading { color: #fff; }
-    .apply-section .section-desc { color: rgba(255,255,255,0.45); }
-
-    .apply-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-      margin-top: 48px;
-    }
-
-    .apply-info h3 {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 8px;
-    }
-    .apply-email {
-      font-family: 'Rethink Sans', sans-serif;
-      font-size: clamp(18px, 2.5vw, 26px);
-      font-weight: 800;
-      color: var(--accent);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-      transition: opacity 0.15s;
-    }
-    .apply-email:hover { opacity: 0.75; }
-
-    .apply-divider {
-      width: 100%;
-      height: 1px;
-      background: rgba(255,255,255,0.08);
-      margin: 24px 0;
-    }
-
-    .checklist-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 14px;
-    }
-    .checklist {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .check-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.5;
-    }
-    .check-icon {
-      width: 18px;
-      height: 18px;
-      border: 1px solid rgba(0,199,60,0.4);
-      border-radius: 4px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 0.6rem;
-    }
-    .check-icon::after { content: '✓'; font-weight: 700; }
-
-    /* QR side */
-    .apply-qr-side {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-    .qr-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      width: 100%;
-      max-width: 260px;
-    }
-    .qr-card .qr-caption {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-    }
-    .qr-wrap {
-      width: 150px;
-      height: 150px;
-      background: #fff;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .qr-wrap svg { width: 100%; height: 100%; }
-    .qr-card .qr-email {
-      font-family: 'Rethink Sans', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.55);
-    }
-    .apply-qr-hint {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
-      line-height: 1.5;
-    }
-
 
     /* ── FAQ ── */
     .faq-section { background: var(--background); }
@@ -730,7 +449,6 @@
       justify-content: space-between;
       gap: 16px;
       padding: 18px 24px;
-      font-family: 'NanumSquareNeo', 'Rethink Sans', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
       text-align: left;
@@ -767,12 +485,11 @@
     }
     .faq-item.open .faq-body { max-height: 400px; }
     .faq-body p {
-      padding: 0 24px 20px;
+      padding: 16px 24px 20px;
       font-size: 0.875rem;
       color: var(--muted-fg);
       line-height: 1.8;
       border-top: 1px solid var(--border);
-      padding-top: 16px;
     }
 
     /* ── FOOTER ── */
@@ -791,29 +508,7 @@
       border-bottom: 1px solid var(--border);
       margin-bottom: 24px;
     }
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .footer-logo img {
-      height: 28px;
-      width: auto;
-      display: block;
-    }
-    .footer-brand p {
-      font-size: 0.8rem;
-      color: var(--muted-fg);
-      line-height: 1.7;
-    }
-    .footer-brand a { color: var(--muted-fg); text-decoration: none; }
-    .footer-brand a:hover { text-decoration: underline; }
-
-    .footer-links {
-      display: flex;
-      gap: 56px;
-    }
-    .footer-col h4.footer-col-en { font-family: 'NanumSquareNeo', sans-serif; }
+    .footer-links { display: flex; gap: 56px; }
     .footer-col h4 {
       font-size: 0.9rem;
       font-weight: 700;
@@ -839,24 +534,6 @@
       font-size: 0.75rem;
       color: var(--muted-fg);
     }
-    .footer-sns { display: flex; gap: 6px; }
-    .sns-link {
-      width: 30px;
-      height: 30px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-family: 'Rethink Sans', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: var(--muted-fg);
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
-    }
-    .sns-link:hover { background: var(--foreground); border-color: var(--foreground); color: #fff; }
 
     /* ── SCROLL REVEAL ── */
     .reveal {
@@ -875,16 +552,12 @@
       .benefits-grid { grid-template-columns: 1fr; }
       .tl-row { flex-direction: column; }
       .tl-arrow { transform: rotate(90deg); width: 100%; height: 32px; }
-      .apply-grid { grid-template-columns: 1fr; }
-      .apply-qr-side { align-items: flex-start; }
       .footer-top { flex-direction: column; }
       .footer-links { gap: 24px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 560px) {
       .tl-row { gap: 0; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .card-dark { grid-column: span 1; }
       .countdown { gap: 6px; }
       .cd-block { width: 60px; }
     }
@@ -892,7 +565,7 @@
 </head>
 <body>
 
-<!-- ═══════════════ NAV ═══════════════ -->
+<!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
     <img src="logo.png" alt="NAVER D2SF" />
@@ -906,7 +579,7 @@
   </div>
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-badge reveal">
     <span class="dot"></span>
@@ -944,7 +617,7 @@
   </div>
 </section>
 
-<!-- ═══════════════ TICKER ═══════════════ -->
+<!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <div class="ticker-set">
@@ -978,7 +651,7 @@
   </div>
 </div>
 
-<!-- ═══════════════ ABOUT ═══════════════ -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-inner">
@@ -986,14 +659,13 @@
         <h2 class="section-heading">네이버 D2SF<br>캠퍼스 기술창업 공모전</h2>
       </div>
       <div class="about-copy reveal">
-	<p>
         <p>이제 누구나 아이디어만 있으면 제품을 만들 수 있습니다. 만드는 것이 쉬워질수록 "왜 이 문제를 해결해야 하는가"라는 본질은 더욱 더 중요합니다. 문제에 집착하고, 시장과 고객에 집중하며, 자신만의 미션으로 세상을 혁신하려는 창업가와 함께하고 싶습니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ BENEFITS ═══════════════ -->
+<!-- BENEFITS -->
 <section class="benefits" id="benefits">
   <div class="container">
     <h2 class="section-heading reveal">선발팀 혜택</h2>
@@ -1013,14 +685,14 @@
         <ul class="benefit-list">
           <li>네이버 D2SF · 네이버 기술 리더 피드백</li>
           <li>D2SF 선배 창업가 멘토링</li>
-	  <li>우수팀 네이버 직접 투자 연계</li>
+          <li>우수팀 네이버 직접 투자 연계</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ TIMELINE ═══════════════ -->
+<!-- TIMELINE -->
 <section class="timeline-section" id="timeline">
   <div class="container">
     <h2 class="section-heading reveal">지원 <span class="accent">프로세스</span></h2>
@@ -1073,120 +745,7 @@
   </div>
 </section>
 
-<!-- ═══════════════ APPLY (removed) ═══════════════ -->
-<section class="apply-section" id="apply" style="display:none">
-  <div class="container">
-    <p class="section-eyebrow reveal">지원 방법</p>
-    <h2 class="section-heading reveal">YES! <span style="color:var(--accent);">Apply.</span></h2>
-    <p class="section-desc reveal">마감 2026년 5월 10일 (일)</p>
-
-    <div class="apply-grid">
-      <div class="apply-info reveal">
-        <h3>이메일로 지원하기</h3>
-        <a href="mailto:d2sf@navercorp.com" class="apply-email">d2sf@navercorp.com</a>
-        <div class="apply-divider"></div>
-        <p class="checklist-label">지원 시 포함 서류</p>
-        <div class="checklist">
-          <div class="check-row">
-            <div class="check-icon"></div>
-            <span>팀 소개 (팀원 이름, 소속 학교, 역할)</span>
-          </div>
-          <div class="check-row">
-            <div class="check-icon"></div>
-            <span>기술 아이디어 / 제품 설명 (자유 형식)</span>
-          </div>
-          <div class="check-row">
-            <div class="check-icon"></div>
-            <span>현재 개발 단계 및 데모 링크 (있을 경우)</span>
-          </div>
-          <div class="check-row">
-            <div class="check-icon"></div>
-            <span>창업 동기 및 목표 (1~2페이지 권장)</span>
-          </div>
-          <div class="check-row">
-            <div class="check-icon"></div>
-            <span>지원자 연락처 (이메일 / 전화번호)</span>
-          </div>
-        </div>
-        <div style="margin-top:28px;">
-          <a href="https://airtable.com/appIVLeFNOTuXM5kP/pagJOiCvxgOpVBBWi/form" target="_blank" rel="noopener" class="btn btn-accent btn-lg">지원하기 →</a>
-        </div>
-      </div>
-
-      <div class="apply-qr-side reveal">
-        <div class="qr-card">
-          <p class="qr-caption">모바일로 지원하기</p>
-          <div class="qr-wrap">
-            <svg viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="9" height="9" rx="1.2" fill="#09090b"/>
-              <rect x="2.5" y="2.5" width="6" height="6" rx="0.7" fill="#fff"/>
-              <rect x="3.5" y="3.5" width="4" height="4" rx="0.4" fill="#09090b"/>
-              <rect x="27" y="1" width="9" height="9" rx="1.2" fill="#09090b"/>
-              <rect x="28.5" y="2.5" width="6" height="6" rx="0.7" fill="#fff"/>
-              <rect x="29.5" y="3.5" width="4" height="4" rx="0.4" fill="#09090b"/>
-              <rect x="1" y="27" width="9" height="9" rx="1.2" fill="#09090b"/>
-              <rect x="2.5" y="28.5" width="6" height="6" rx="0.7" fill="#fff"/>
-              <rect x="3.5" y="29.5" width="4" height="4" rx="0.4" fill="#09090b"/>
-              <rect x="12" y="1" width="2" height="2" fill="#09090b"/>
-              <rect x="15" y="1" width="2" height="2" fill="#09090b"/>
-              <rect x="19" y="1" width="2" height="2" fill="#09090b"/>
-              <rect x="23" y="1" width="2" height="2" fill="#09090b"/>
-              <rect x="12" y="4" width="2" height="2" fill="#09090b"/>
-              <rect x="17" y="4" width="2" height="2" fill="#09090b"/>
-              <rect x="21" y="4" width="2" height="2" fill="#09090b"/>
-              <rect x="12" y="7" width="2" height="4" fill="#09090b"/>
-              <rect x="15" y="7" width="2" height="2" fill="#09090b"/>
-              <rect x="19" y="7" width="4" height="2" fill="#09090b"/>
-              <rect x="1" y="12" width="2" height="2" fill="#09090b"/>
-              <rect x="4" y="12" width="2" height="4" fill="#09090b"/>
-              <rect x="7" y="12" width="2" height="2" fill="#09090b"/>
-              <rect x="1" y="16" width="4" height="2" fill="#09090b"/>
-              <rect x="7" y="16" width="2" height="4" fill="#09090b"/>
-              <rect x="11" y="11" width="4" height="4" rx="0.5" fill="#00c73c"/>
-              <rect x="17" y="11" width="2" height="2" fill="#09090b"/>
-              <rect x="21" y="11" width="4" height="2" fill="#09090b"/>
-              <rect x="27" y="12" width="2" height="2" fill="#09090b"/>
-              <rect x="31" y="12" width="4" height="2" fill="#09090b"/>
-              <rect x="29" y="15" width="4" height="2" fill="#09090b"/>
-              <rect x="27" y="17" width="2" height="4" fill="#09090b"/>
-              <rect x="33" y="17" width="2" height="2" fill="#09090b"/>
-              <rect x="11" y="17" width="2" height="2" fill="#09090b"/>
-              <rect x="15" y="17" width="4" height="4" fill="#09090b"/>
-              <rect x="21" y="17" width="2" height="4" fill="#09090b"/>
-              <rect x="25" y="17" width="2" height="2" fill="#09090b"/>
-              <rect x="1" y="20" width="2" height="4" fill="#09090b"/>
-              <rect x="5" y="20" width="4" height="2" fill="#09090b"/>
-              <rect x="11" y="21" width="4" height="2" fill="#09090b"/>
-              <rect x="17" y="21" width="2" height="2" fill="#09090b"/>
-              <rect x="21" y="22" width="2" height="4" fill="#09090b"/>
-              <rect x="27" y="22" width="8" height="2" fill="#09090b"/>
-              <rect x="3" y="24" width="2" height="2" fill="#09090b"/>
-              <rect x="7" y="24" width="2" height="2" fill="#09090b"/>
-              <rect x="13" y="24" width="2" height="4" fill="#09090b"/>
-              <rect x="17" y="24" width="4" height="2" fill="#09090b"/>
-              <rect x="25" y="25" width="2" height="2" fill="#09090b"/>
-              <rect x="29" y="25" width="4" height="4" rx="0.5" fill="#00c73c"/>
-              <rect x="12" y="27" width="2" height="4" fill="#09090b"/>
-              <rect x="16" y="27" width="4" height="2" fill="#09090b"/>
-              <rect x="22" y="27" width="2" height="4" fill="#09090b"/>
-              <rect x="27" y="28" width="2" height="4" fill="#09090b"/>
-              <rect x="33" y="29" width="2" height="2" fill="#09090b"/>
-              <rect x="12" y="31" width="4" height="4" fill="#09090b"/>
-              <rect x="18" y="31" width="2" height="2" fill="#09090b"/>
-              <rect x="22" y="31" width="4" height="2" fill="#09090b"/>
-              <rect x="30" y="31" width="2" height="4" fill="#09090b"/>
-            </svg>
-          </div>
-          <p class="qr-email">d2sf@navercorp.com</p>
-        </div>
-        <p class="apply-qr-hint">QR 스캔 또는 이메일로<br>바로 지원하세요</p>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- ═══════════════ FAQ ═══════════════ -->
+<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="container">
     <h2 class="section-heading reveal">자주 묻는 질문</h2>
@@ -1277,7 +836,7 @@
   </div>
 </section>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -1285,18 +844,19 @@
         <div class="footer-col">
           <h4>바로가기</h4>
           <ul>
-            <li><a href="#about">공모전 소개</a></li>
-            <li><a href="#benefits">베네핏</a></li>
-            <li><a href="#timeline">일정</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#benefits">Benefit</a></li>
+            <li><a href="#timeline">Timeline</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4 class="footer-col-en">Contact</h4>
+          <h4>Contact</h4>
           <ul>
             <li><a href="mailto:d2sf@navercorp.com">d2sf@navercorp.com</a></li>
           </ul>
         </div>
+      </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 NAVER D2SF. All rights reserved.</span>
@@ -1304,24 +864,22 @@
   </div>
 </footer>
 
-<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<!-- SCRIPTS -->
 <script>
-  /* ── Hero Canvas: Echo Typography ── */
+  /* Hero Canvas: Echo Typography */
   (function() {
     const canvas = document.getElementById('hero-canvas');
     const ctx    = canvas.getContext('2d');
     const COLOR  = '#1c1917';
-    const BG     = '#ffffff';
-    const ECHO   = 5;           // number of echo layers
-    const STEP   = 9;           // px between each echo layer
-    const LINE_W = 0.6;         // stroke width per echo
+    const ECHO   = 5;
+    const STEP   = 9;
+    const LINE_W = 0.6;
 
     function render() {
       const dpr = window.devicePixelRatio || 1;
       const container = canvas.parentElement;
       const maxW = Math.min(container.clientWidth, 960);
 
-      /* ── fit font to "Obsessed?" width ── */
       ctx.font = `800 100px 'Rethink Sans', sans-serif`;
       const sampleW = ctx.measureText('Obsessed?').width;
       const fontSize = Math.floor(100 * (maxW * 0.94) / sampleW);
@@ -1338,20 +896,18 @@
       canvas.height       = Math.round(totalH * dpr);
       ctx.scale(dpr, dpr);
 
-      /* Clear */
       ctx.clearRect(0, 0, maxW, totalH);
 
       const cx = maxW / 2;
-      const y1 = padTop + safeFont;          // baseline line 1 "Are You"
-      const y2 = y1 + lineH;                 // baseline line 2 "Obsessed?"
+      const y1 = padTop + safeFont;
+      const y2 = y1 + lineH;
       const fontStr = `800 ${safeFont}px 'Rethink Sans', sans-serif`;
 
       ctx.textAlign    = 'center';
       ctx.textBaseline = 'alphabetic';
 
-      /* 1. Echo layers — stroke only, offset downward, fading */
       for (let i = ECHO; i >= 1; i--) {
-        const opacity = 0.05 + (i / ECHO) * 0.2;  // close = faded, far = visible
+        const opacity = 0.05 + (i / ECHO) * 0.2;
         ctx.save();
         ctx.font        = fontStr;
         ctx.strokeStyle = COLOR;
@@ -1362,7 +918,6 @@
         ctx.restore();
       }
 
-      /* 2. Solid fill on top */
       ctx.save();
       ctx.font        = fontStr;
       ctx.fillStyle   = COLOR;
@@ -1372,12 +927,10 @@
       ctx.restore();
     }
 
-    /* Wait for Rethink Sans to load, then render */
     document.fonts.load(`800 100px 'Rethink Sans'`).then(() => {
       render();
     }).catch(() => render());
 
-    /* Re-render on resize */
     let raf;
     new ResizeObserver(() => {
       cancelAnimationFrame(raf);
